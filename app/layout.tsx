@@ -6,15 +6,14 @@ const inter = Inter({ subsets: ["latin"], weight: ["400", "500"], variable: "--f
 
 const title = "Y3K.Club";
 const description = "(Re)launch your dream project in 6 weeks, starting Oct 14.";
-const image = { url: "/Y3KSocialSharing.jpg", width: 1290, height: 1290, alt: "Y3K" };
+const image = { url: "/Y3KSocialSharing.jpg", width: 1280, height: 900, alt: "Y3K" };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://y3k.club"),
   title,
   description,
   openGraph: { type: "website", url: "/", siteName: title, title, description, images: [image] },
-  // Square image, so the regular card (not summary_large_image, which crops to 2:1)
-  twitter: { card: "summary", title, description, images: [image] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 export const viewport: Viewport = {
