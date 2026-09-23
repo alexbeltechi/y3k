@@ -15,7 +15,7 @@ export default function Rules() {
     <>
       <p>
         <button type="button" className="link" onClick={() => ref.current?.showModal()}>
-          Start on Oct 14
+          Next cohort starts Oct 14
         </button>
       </p>
       <dialog ref={ref} className="rules" aria-label="Rules" onClick={(e) => e.target === ref.current && close()}>
