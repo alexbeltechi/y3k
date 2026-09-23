@@ -23,15 +23,14 @@ export default function Rules() {
           X
         </button>
         <div className="rules-body">
-          <p>Launch or relaunch something cool</p>
-          <p>Focus on what you can realistically ship or improve in 6 weeks, no extensions</p>
-          <p>Learn and build with other cohort members from the group chat</p>
+          <p>Launch, relaunch or improve on something cool</p>
+          <p>6 weeks, no extensions</p>
+          <p>Learn, build, and ask questions in the group chat, 24/7</p>
           <p>
-            Get feedback and tips from the{" "}
             <a href="https://beltechi.com" target="_blank" rel="noopener noreferrer">
-              founder
-            </a>
-            , if you need it
+              Alex
+            </a>{" "}
+            is around if you ever want feedback or a second opinion
           </p>
           <p>Learn to build stuff with AI</p>
           <p>Join a weekly call with the cohort to share progress or get feedback from others</p>
