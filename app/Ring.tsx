@@ -12,9 +12,15 @@ const MIN_REPEATS = 1;
 
 type Layout = { glyphs: { ch: string; angle: number }[]; radius: number; fontSize: number };
 
+type Props = {
+  text?: string;
+  repeats?: number; // fixed repeat count; omit to auto-fill based on FONT_VH
+  radiusScale?: number; // multiplier on the computed radius, e.g. 0.7 for a smaller ring
+};
+
 // Lays the text around a cylinder, spacing each glyph by its real width so the
 // proportional font reads naturally.
-export default function Ring() {
+export default function Ring({ text = TEXT, repeats: fixedRepeats, radiusScale = 1 }: Props = {}) {
   const ref = useRef<HTMLDivElement>(null);
   const [layout, setLayout] = useState<Layout | null>(null);
 
@@ -33,11 +39,11 @@ export default function Ring() {
       // Shrink the ring progressively on landscape screens: full size up to 3:4,
       // down to 70% from 16:10 and wider.
       const t = Math.min(Math.max((w / h - 0.75) / (1.6 - 0.75), 0), 1);
-      const radius = Math.max(0.62 * w * (1 - 0.3 * t), 0.48 * h);
+      const radius = Math.max(0.62 * w * (1 - 0.3 * t), 0.48 * h) * radiusScale;
       const circumference = 2 * Math.PI * radius;
-      const repeats = Math.max(MIN_REPEATS, Math.round(circumference / (phraseWidth * FONT_VH * h)));
+      const repeats = fixedRepeats ?? Math.max(MIN_REPEATS, Math.round(circumference / (phraseWidth * FONT_VH * h)));
 
-      const chars = [...TEXT.repeat(repeats)];
+      const chars = [...text.repeat(repeats)];
       const widths = chars.map(advance);
       const total = widths.reduce((a, b) => a + b, 0);
 
@@ -53,10 +59,10 @@ export default function Ring() {
 
     let cancelled = false;
     // Measure only once the web font is in, or spacing would use the fallback's widths
-    document.fonts.load(font, TEXT).then(() => {
+    document.fonts.load(font, text).then(() => {
       if (cancelled) return;
       ctx.font = font;
-      phraseWidth = [...TEXT].reduce((sum, ch) => sum + advance(ch), 0);
+      phraseWidth = [...text].reduce((sum, ch) => sum + advance(ch), 0);
       update();
       window.addEventListener("resize", update);
     });
@@ -64,7 +70,7 @@ export default function Ring() {
       cancelled = true;
       window.removeEventListener("resize", update);
     };
-  }, []);
+  }, [text, fixedRepeats, radiusScale]);
 
   return (
     <div className="ring" aria-hidden="true">
