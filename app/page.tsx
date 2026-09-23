@@ -11,7 +11,7 @@ export default function Home() {
       <main>
         <div className="content">
           <p>
-            (Re)launch your <Project /> in 6 weeks
+            <Project />
           </p>
           <Rules />
         </div>
