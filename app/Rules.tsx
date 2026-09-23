@@ -23,7 +23,7 @@ export default function Rules() {
           X
         </button>
         <div className="rules-body">
-          <p>Launch or relaunch something cool.</p>
+          <p>Launch or relaunch something cool</p>
           <p>Focus on what you can realistically ship or improve in 6 weeks, no extensions</p>
           <p>Learn and build with other cohort members from the group chat</p>
           <p>
