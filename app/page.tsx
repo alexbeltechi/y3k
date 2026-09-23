@@ -9,7 +9,7 @@ export default function Home() {
       <Video />
       <Ring />
       <main>
-        <div>
+        <div className="content">
           <p>
             (Re)launch your <Project /> in 6 weeks
           </p>

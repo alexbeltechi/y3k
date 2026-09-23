@@ -54,6 +54,13 @@ main {
   z-index: 1;
 }
 
+/* Fixed-width hit area so the click-to-toggle-music zone doesn't jitter as the
+   rotating project word changes length every second */
+.content {
+  width: min(90vw, 640px);
+  padding: 16px 0;
+}
+
 /* Spinning ring of text; radius and font size are set from the viewport in Ring.tsx */
 .ring {
   position: fixed;

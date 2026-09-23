@@ -67,7 +67,7 @@ export default function Video() {
   toggleRef.current = toggle;
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      if ((e.target as Element).closest("a, button, dialog")) return;
+      if ((e.target as Element).closest(".content, dialog, .music")) return;
       toggleRef.current();
     };
     document.addEventListener("click", onClick);
