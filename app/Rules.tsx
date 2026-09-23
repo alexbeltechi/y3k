@@ -34,7 +34,7 @@ export default function Rules() {
             , if you need it
           </p>
           <p>Learn to build stuff with AI</p>
-          <p>Join a weekly call to share progress or get feedback</p>
+          <p>Join a weekly call with the cohort to share progress or get feedback from others</p>
           <p>Participation is free (donations welcome)</p>
           <p>
             <a
