@@ -21,7 +21,7 @@ const params = new URLSearchParams({
 
 // Background YouTube video cropped to a centered square, plus a Music: On/Off
 // toggle. The player is driven via postMessage, so no YouTube API script is needed.
-export default function Video({ showLabel = true }: { showLabel?: boolean } = {}) {
+export default function Video() {
   const ref = useRef<HTMLIFrameElement>(null);
   const [sound, setSound] = useState(false);
   const soundRef = useRef(false); // current value for the page-wide click listener
@@ -87,11 +87,9 @@ export default function Video({ showLabel = true }: { showLabel?: boolean } = {}
           />
         </div>
       </div>
-      {showLabel && (
-        <button type="button" className="link music" onClick={toggle}>
-          Music: {sound ? "On" : "Off"}
-        </button>
-      )}
+      <button type="button" className="link music" onClick={toggle}>
+        Music: {sound ? "On" : "Off"}
+      </button>
     </>
   );
 }
