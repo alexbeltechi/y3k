@@ -6,7 +6,9 @@ const PROJECTS = [
   "(Re)launch something cool in 6 weeks",
   "(Re)launch a new personal website in 6 weeks",
   "(Re)launch a new social media in 6 weeks",
+  "(Re)launch a newsletter in 6 weeks",
   "(Re)launch a new YouTube video in 6 weeks",
+  "(Re)launch an online course in 6 weeks",
   "(Re)launch your portfolio in 6 weeks",
 ];
 
