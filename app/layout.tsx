@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-inter" });
 
 const title = "Y3K.Club";
-const shareTitle = "(Re)launch your dream project in 6 weeks";
-const description = "Join a group of makers launching together, starting Oct 14";
+const shareTitle = "(Re)launch something cool in 6 weeks";
+const description = "Join a group of makers launching together. Start Oct 14";
 const image = { url: "/Y3KSocialSharing.jpg", width: 1280, height: 900, alt: "Y3K" };
 
 export const metadata: Metadata = {

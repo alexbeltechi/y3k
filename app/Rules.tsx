@@ -23,9 +23,9 @@ export default function Rules() {
           X
         </button>
         <div className="rules-body">
-          <p>Launch or relaunch your dream project</p>
-          <p>Focus on what you can realistically do in 6 weeks, no extensions</p>
-          <p>Learn and build with other members from the programme</p>
+          <p>Launch or relaunch something cool.</p>
+          <p>Focus on what you can realistically ship or improve in 6 weeks, no extensions</p>
+          <p>Learn and build with other cohort members from the group chat</p>
           <p>
             Get feedback and tips from the{" "}
             <a href="https://beltechi.com" target="_blank" rel="noopener noreferrer">
@@ -33,8 +33,8 @@ export default function Rules() {
             </a>
           </p>
           <p>Learn to build stuff with AI</p>
-          <p>Meet once a week on a call to discuss progress and get feedback from the community</p>
-          <p>Participation is free</p>
+          <p>Join a weekly call to share progress or get feedback</p>
+          <p>Participation is free (donations welcome)</p>
           <p>
             <a
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MESSAGE)}`}
