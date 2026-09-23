@@ -31,6 +31,7 @@ export default function Rules() {
             <a href="https://beltechi.com" target="_blank" rel="noopener noreferrer">
               founder
             </a>
+            , if you need it
           </p>
           <p>Learn to build stuff with AI</p>
           <p>Join a weekly call to share progress or get feedback</p>
