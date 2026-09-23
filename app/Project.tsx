@@ -5,14 +5,13 @@ import { useEffect, useState } from "react";
 const PROJECTS = [
   "dream project",
   "personal website",
-  "photography book",
-  "portfolio",
-  "zine",
-  "album",
-  "clothing drop",
-  "short film",
+  "portfolio book",
+  "online course",
+  "social presence",
+  "personal brand",
   "newsletter",
-  "art show",
+  "YouTube channel",
+  "online store",
 ];
 
 export default function Project() {
@@ -23,5 +22,5 @@ export default function Project() {
     return () => clearInterval(id);
   }, []);
 
-  return <span aria-live="off">{PROJECTS[i]}</span>;
+  return <span aria-live="off">{PROJECTS[i % PROJECTS.length]}</span>;
 }

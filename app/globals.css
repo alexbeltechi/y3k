@@ -1,5 +1,5 @@
 :root {
-  --blue: #002fa7;
+  --bg: #000000;
   --fg: #ffffff;
 }
 
@@ -11,12 +11,12 @@
 html,
 body {
   height: 100%;
-  background: var(--blue);
+  background: var(--bg);
   color: var(--fg);
 }
 
 body {
-  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 16px/1.5 var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,13 +28,144 @@ main {
   text-align: center;
 }
 
-a {
+a,
+.link {
   color: inherit;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+p + p {
+  margin-top: 4px;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Spinning ring of text; radius and font size are set from the viewport in Ring.tsx */
+.ring {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ring-tilt,
+.ring-spin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+}
+
+.ring-tilt {
+  transform: rotateZ(-24deg) rotateX(-35.264deg);
+}
+
+.ring-spin {
+  font-weight: 500;
+  line-height: 1;
+  white-space: pre;
+  animation: spin 40s linear infinite;
+}
+
+.ring-spin span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring-spin {
+    animation-duration: 400s;
+  }
+}
+
+/* Rules modal: full screen, frosted so the video and ring still show through */
+.rules {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border: 0;
+  padding: 24px 16px;
+  color: var(--fg);
+  background: rgb(0 0 0 / 0.6);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+.rules[open] {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.rules::backdrop {
+  background: none;
+}
+
+.rules-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* Background video: only the centered square of the frame is used, scaled to
+   cover the whole screen (the screen then crops into that square) */
+.video {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.6; /* 40% transparent, so the text stays legible over bright footage */
+}
+
+.video-square {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max(100vw, 100vh);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+/* 16:9 player centered and overflowing the square on every side, so the sides
+   get cropped off along with YouTube's title bar and progress line */
+.video-square iframe {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  height: calc(100% + 200px);
+  aspect-ratio: 16 / 9;
+  transform: translateX(-50%);
+  border: 0;
+}
+
+.music {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 2; /* above main, which covers the whole screen */
 }
