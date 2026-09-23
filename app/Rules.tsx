@@ -35,6 +35,7 @@ export default function Rules() {
           <p>Learn to build stuff with AI</p>
           <p>Join a weekly call with the cohort to share progress or get feedback from others</p>
           <p>Participation is free (donations welcome)</p>
+          <p>You don&apos;t need another course, you need to get started</p>
           <p>
             <a
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MESSAGE)}`}
