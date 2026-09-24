@@ -87,8 +87,8 @@ export default function Video() {
           />
         </div>
       </div>
-      <button type="button" className="link music" onClick={toggle}>
-        Music: {sound ? "On" : "Off"}
+      <button type="button" className="music" onClick={toggle}>
+        <span className="link">Music: {sound ? "On" : "Off"}</span> (Wall of Sleep by Daniel Avery)
       </button>
     </>
   );
