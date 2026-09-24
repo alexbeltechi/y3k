@@ -23,18 +23,20 @@ export default function Rules() {
           X
         </button>
         <div className="rules-body">
-          <p>Launch, relaunch or improve on something cool</p>
-          <p>6 weeks, no extensions: Oct 14 — Nov 25</p>
+          <p>Y3K is a community of people learning and building things</p>
+          <p>Choose a personal project you&apos;d like to launch, relaunch or improve on in a 6 week timeframe</p>
+          <p>Work in your spare time, at your own pace</p>
           <p>Learn, build, and ask questions in the group chat, 24/7</p>
+          <p>Join a weekly call (if you want) with the cohort to share progress or get feedback from others</p>
           <p>
             <a href="https://beltechi.com" target="_blank" rel="noopener noreferrer">
               Alex
             </a>{" "}
-            is around if you ever want feedback or a second opinion
+            is around if you need a second opinion or technical advice
           </p>
-          <p>Learn to build stuff with AI</p>
-          <p>Join a weekly call with the cohort to share progress or get feedback from others</p>
-          <p>Participation is free (donations welcome)</p>
+          <p>Learn to build stuff with AI or whatever tools you got</p>
+          <p>Next cohort starts Oct 14 — Nov 25</p>
+          <p>Participation is free (you can donate after if you feel like it)</p>
           <p>You don&apos;t need another course, you need to get started</p>
           <p>
             <a
