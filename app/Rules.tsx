@@ -23,20 +23,39 @@ export default function Rules() {
           X
         </button>
         <div className="rules-body">
-          <p>Y3K is a community of people learning and building things</p>
-          <p>Choose a personal project you&apos;d like to launch, relaunch or improve on in a 6 week timeframe</p>
+          <p>
+            Y3K is a <strong>community of people</strong> learning and building things
+          </p>
+          <p>
+            Choose <strong>a personal project</strong> you&apos;d like to launch, relaunch or improve on in a 6 week
+            timeframe
+          </p>
           <p>Work in your spare time, at your own pace</p>
-          <p>Learn, build, and ask questions in the group chat, 24/7</p>
-          <p>Join a weekly call (if you want) with the cohort to share progress or get feedback from others</p>
+          <p>
+            Learn, build, and ask questions in the <strong>group chat</strong>, 24/7
+          </p>
+          <p>
+            Join a <strong>weekly call</strong> (if you want) with the cohort to share progress or get feedback from
+            others
+          </p>
           <p>
             <a href="https://beltechi.com" target="_blank" rel="noopener noreferrer">
               Alex
             </a>{" "}
             is around if you need a second opinion or technical advice
           </p>
-          <p>Learn to build stuff with AI or whatever tools you got</p>
-          <p>Next cohort starts Oct 14 — Nov 25</p>
-          <p>Participation is free (you can donate after if you feel like it)</p>
+          <p>
+            Learn to <strong>build stuff</strong> with AI or whatever tools you got
+          </p>
+          <p>
+            Your project can be <strong>digital or analog</strong>
+          </p>
+          <p>
+            Next cohort <strong>starts Oct 14</strong> — Nov 25
+          </p>
+          <p>
+            Participation is <strong>free</strong> (you can donate after if you feel like it)
+          </p>
           <p>You don&apos;t need another course, you need to get started</p>
           <p>
             <a
