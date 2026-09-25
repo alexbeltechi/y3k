@@ -23,40 +23,43 @@ export default function Rules() {
           X
         </button>
         <div className="rules-body">
+          <p>How it works</p>
           <p>
-            Y3K is a <strong>community of people</strong> learning and building things
+            1. <strong>Choose a project</strong>
+          </p>
+          <p>Pick something you want to make. Digital, physical, creative.</p>
+          <p>
+            2. <strong>Build it in 6 weeks</strong>
+          </p>
+          <p>Start together. Work at your own pace. Finish by the deadline.</p>
+          <p>
+            3. <strong>Join the cohort</strong>
           </p>
           <p>
-            Choose <strong>a personal project</strong> you&apos;d like to launch, relaunch or improve on in a 6 week
-            timeframe
+            Private group chat, 1 weekly group check-in, feedback and show &amp; tell. Optional, but you’re never
+            building alone.
           </p>
-          <p>Work in your spare time, at your own pace</p>
+          <p>What&apos;s included:</p>
           <p>
-            Learn, build, and ask questions in the <strong>group chat</strong>, 24/7
-          </p>
-          <p>
-            Join a <strong>weekly call</strong> (if you want) with the cohort to share progress or get feedback from
-            others
+            <strong>Creative guidance</strong>
           </p>
           <p>
             <a href="https://beltechi.com" target="_blank" rel="noopener noreferrer">
               Alex
             </a>{" "}
-            is around if you need a second opinion or technical advice
+            is around if you want advice on your project, to learn AI tools, or get help with design, branding and
+            marketing
           </p>
           <p>
-            Learn to <strong>build stuff</strong> with AI or whatever tools you got
+            <strong>Learn AI tools</strong>
           </p>
+          <p>Figure out what to use and how</p>
           <p>
-            Your project can be <strong>digital or analog</strong>
+            <strong>Get visibility for your project</strong>
           </p>
-          <p>
-            Next cohort <strong>starts Oct 14</strong> — Nov 25
-          </p>
-          <p>
-            Participation is <strong>free</strong> (you can donate after if you feel like it)
-          </p>
-          <p>You don&apos;t need another course, you need to get started</p>
+          <p>Share progress, questions, discoveries and useful stuff with the group</p>
+          <p>Next cohort starts Oct 14 — Nov 25</p>
+          <p>Participation is free (you can donate after if you feel like it)</p>
           <p>
             <a
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MESSAGE)}`}
