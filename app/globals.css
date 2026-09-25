@@ -39,6 +39,20 @@ p + p {
   margin-top: 8px;
 }
 
+/* Rules modal: title + description pairs sit close together, with more room
+   between one pair and the next, and a bigger gap before each section title. */
+.rules-body p + p {
+  margin-top: 20px;
+}
+
+.rules-body p + p.desc {
+  margin-top: 6px;
+}
+
+.rules-body p + p.section {
+  margin-top: 36px;
+}
+
 button {
   font: inherit;
   color: inherit;

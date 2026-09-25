@@ -23,27 +23,27 @@ export default function Rules() {
           X
         </button>
         <div className="rules-body">
-          <p>How it works</p>
+          <p className="section">How it works</p>
           <p>
             1. <strong>Choose a project</strong>
           </p>
-          <p>Pick something you want to make. Digital, physical, creative.</p>
+          <p className="desc">Pick something you want to make. Digital, physical, creative.</p>
           <p>
             2. <strong>Build it in 6 weeks</strong>
           </p>
-          <p>Start together. Work at your own pace. Finish by the deadline.</p>
+          <p className="desc">Start together. Work at your own pace. Finish by the deadline.</p>
           <p>
             3. <strong>Join the cohort</strong>
           </p>
-          <p>
+          <p className="desc">
             Private group chat, 1 weekly group check-in, feedback and show &amp; tell. Optional, but you’re never
             building alone.
           </p>
-          <p>What&apos;s included:</p>
+          <p className="section">What&apos;s included:</p>
           <p>
             <strong>Creative guidance</strong>
           </p>
-          <p>
+          <p className="desc">
             <a href="https://beltechi.com" target="_blank" rel="noopener noreferrer">
               Alex
             </a>{" "}
@@ -53,13 +53,13 @@ export default function Rules() {
           <p>
             <strong>Learn AI tools</strong>
           </p>
-          <p>Figure out what to use and how</p>
+          <p className="desc">Figure out what to use and how</p>
           <p>
             <strong>Get visibility for your project</strong>
           </p>
-          <p>Share progress, questions, discoveries and useful stuff with the group</p>
-          <p>Next cohort starts Oct 14 — Nov 25</p>
-          <p>Participation is free (you can donate after if you feel like it)</p>
+          <p className="desc">Share progress, questions, discoveries and useful stuff with the group</p>
+          <p className="section">Next cohort starts Oct 14 — Nov 25</p>
+          <p className="desc">Participation is free (you can donate after if you feel like it)</p>
           <p>
             <a
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MESSAGE)}`}
